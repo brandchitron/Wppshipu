@@ -1,12 +1,15 @@
 services:
   - type: web
-    name: nexuscoders-whatsapp-bot
+    name: remo-whatsapp-bot
     env: node
     buildCommand: npm install
     startCommand: npm start
-    nodeVersion: 18.19.0
     envVars:
-      - key: NODE_ENV
-        value: production
       - key: NODE_VERSION
-        value: 18.19.0
+        value: 18.17.0
+      - key: LOG_LEVEL
+        value: info
+      - key: BOT_TIMEZONE
+        value: Asia/Dhaka
+    healthCheckPath: /status
+    autoDeploy: true
