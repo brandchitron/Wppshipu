@@ -1,32 +1,24 @@
 {
-
-  "name": "nexuscoders-whatsapp-bot",
-
+  "name": "remo-whatsapp-bot",
   "version": "1.0.0",
-
-  "description": "NexusCoders WhatsApp Bot",
-
-  "main": "index.js",
-
+  "description": "WhatsApp reminder bot - Remo, powered by Lume m1",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
-
-    "start": "node index.js",
-
-    "dev": "nodemon index.js",
-
-    "lint": "eslint .",
-
-    "format": "prettier --write .",
-
-    "clean": "rm -rf node_modules && rm -rf package-lock.json",
-
-    "reset": "npm run clean && npm install",
-
-    "build": "npm install --legacy-peer-deps"
-
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
-
+  "keywords": ["whatsapp", "bot", "reminder", "baileys"],
+  "author": "Chitron Bhattacharjee",
+  "license": "MIT",
   "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0",
+    "dotenv": "^16.3.1",
+    "pino": "^8.17.0",
+    "node-cron": "^3.0.3",
+    "luxon": "^3.4.4",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
 
     "@adiwajshing/keyed-db": "^0.2.4",
 
@@ -176,87 +168,7 @@
 
 
   },
-
-  "devDependencies": {
-
-    "@eslint/eslintrc": "^2.1.4",
-
-    "@types/node": "^20.10.4",
-
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-
-    "@typescript-eslint/parser": "^6.13.2",
-
-    "eslint": "^8.55.0",
-
-    "eslint-config-prettier": "^9.1.0",
-
-    "eslint-plugin-prettier": "^5.0.1",
-
-    "nodemon": "^3.0.2",
-
-    "prettier": "^3.1.0",
-
-    "typescript": "^5.3.3"
-
-  },
-
   "engines": {
-
-    "node": "18.x"
-
-  },
-
-  "repository": {
-
-    "type": "git",
-
-    "url": "git+https://github.com/NexusCoders-cyber/NexusCoders-whatsapp-Bot.git"
-
-  },
-
-  "keywords": [
-
-    "whatsapp-bot",
-
-    "baileys",
-
-    "bot",
-
-    "whatsapp",
-
-    "automation",
-
-    "nexuscoders"
-
-  ],
-
-  "author": "NexusCoders",
-
-  "license": "MIT",
-
-  "bugs": {
-
-    "url": "https://github.com/NexusCoders-cyber/nexuscoders-whatsapp-bot/issues"
-
-  },
-
-  "homepage": "https://github.com/NexusCoders-cyber/nexuscoders-whatsapp-bot#readme",
-
-  "overrides": {
-
-    "jimp": "0.16.13",
-
-    "sharp": "0.32.6",
-
-    "@whiskeysockets/baileys": {
-
-      "jimp": "0.16.13",
-
-      "sharp": "0.32.6"
-
-    }
-
+    "node": ">=18.0.0"
   }
-
-  }
+}
